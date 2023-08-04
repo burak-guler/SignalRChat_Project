@@ -1,0 +1,121 @@
+﻿@page
+@*<div class="container">
+    <div class="row p-1">
+        <div class="col-1">User</div>
+        <div class="col-5"><input type="text" id="userInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-1">Message</div>
+        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6 text-end">
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <hr />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>*@
+
+<div id="div1">
+    <label>Kullanıcı Adı</label>
+    <input type="text" id="userName" class="form-control" style="width:30%;"/>
+    <br />
+    <input class="btn btn-primary" type="button" id="toggleButton" value="Giriş" />
+</div>
+
+<div id="div2" style="display:none;">
+    
+    <br />
+    <div class="container">
+        <div class="row p-1">
+            <div class="col-1">Gönderen kişi</div>
+            <div class="col-5"><input type="text" id="userInput" class="form-control" style="width:30%;" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-1">Alıcı Kişi/Grup</div>
+            <div class="col-5"><input type="text" id="sendName" class="form-control" style="width:30%;" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-1">Mesaj</div>
+            <div class="col-5 "><input type="text" class="w-100 form-control" id="messageInput" style="width:30%;" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6 text-end">
+                <input class="btn btn-success" type="button" id="privatesendButton" value="Send Private Message" />
+                <input class="btn btn-primary" type="button" id="globalsendButton" value="Send Global Message" />
+                <br />
+                
+                <input class="btn btn-warning" type="button" id="joinGroupButton" value="Join/Create Group" />
+                <input class="btn btn-danger" type="button" id="leaveGroupButton" value="Leave Group" />
+                <input class="btn btn-dark" type="button" id="groupMessage" value="Send Group Message" />
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6">
+                <hr />
+            </div>
+        </div>
+        <div class="row p-1" >
+            <div class="col-6">
+                <ul id="messagesList"></ul>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <h4>Online Users</h4>
+    <div id="userList" style="list-style:auto; margin-left:20px;">
+        <!-- Kullanıcılar burada listelenecek -->
+    </div>
+
+    <h4>Group List</h4>
+    <div id="groupList">
+
+    </div>
+
+    <hr />
+
+    @*<div class="container">
+       Genel:
+       <br />
+        <div class="row p-1">
+            <div class="col-1">Gönderen</div>
+            <div class="col-5"><input type="text" id="userInput" class="form-control" style="width:30%;" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-1">Mesaj</div>
+            <div class="col-5"><input type="text" class="w-100 form-control" id="messageInput"  style="width:30%;" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6 text-end">
+                <input class="btn btn-primary" type="button" id="globalsendButton" value="Send Global Message" />
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6">
+                <hr />
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-6">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+    </div>*@
+
+</div>
+
+
+
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
